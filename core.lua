@@ -47,7 +47,6 @@ local function OnEvent(self, event, addon_name)
 	end
 
 	Loader.registered[addon_name]();
-	_G[addon_name].Print("Loaded.");
 end
 
 local listener = CreateFrame("Frame");
