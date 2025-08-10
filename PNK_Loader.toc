@@ -1,0 +1,8 @@
+## Title: |cFF2EBFA6PNK_Loader|r
+## Interface: 30300
+## Version: 0.1alpha
+## Author: Hurubon
+## DefaultState: enabled
+
+Libraries\PNK_LibStub\core.lua
+core.lua

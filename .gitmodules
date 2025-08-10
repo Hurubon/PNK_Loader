@@ -1,0 +1,3 @@
+[submodule "Libraries/PNK_LibStub"]
+	path = Libraries/PNK_LibStub
+	url = https://github.com/Hurubon/PNK_LibStub
