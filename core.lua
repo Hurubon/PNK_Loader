@@ -1,4 +1,4 @@
-local Loader = PNK_LibStub:NewLibrary("PNK_Loader", 4);
+local Loader = PNK_LibStub:NewLibrary("PNK_Loader", 5);
 
 if Loader == nil then
     return;
@@ -14,11 +14,11 @@ function Loader:Register(name, InitFunction)
 	assert(
 		type(name) == "string",
 		("Bad argument #2 to `Register' (expected string, got %q).")
-			.format(type(name)));
+			:format(type(name)));
 	assert(
 		type(InitFunction) == "function" or InitFunction == nil,
 		("Bad argument #3 to `Register' (expected function or nil, got %q).")
-			.format(type(InitFunction)));
+			:format(type(InitFunction)));
 
     self.registered[name] = InitFunction or function() end;
 end
@@ -27,11 +27,11 @@ function Loader:Unregister(name)
 	assert(
 		type(name) == "string",
 		("Bad argument #2 to `Unregister' (expected string, got %q)")
-			.format(type(name)));
+			:format(type(name)));
 	assert(
 		self.registered[name] ~= nil,
 		("Attempting to unregister unknown addon `%s'.")
-			.format(name));
+			:format(name));
 
     self.registered[name] = nil;
 end

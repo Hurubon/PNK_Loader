@@ -1,6 +1,6 @@
 ## Title: |cFF2EBFA6PNK_Loader|r
 ## Interface: 30300
-## Version: 0.4alpha
+## Version: 0.5alpha
 ## Author: Hurubon
 ## DefaultState: enabled
 
