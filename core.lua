@@ -11,10 +11,28 @@ Loader.registered = {};
 	Member functions
 --]]---------------------------------------------------------------------------
 function Loader:Register(name, InitFunction)
+	assert(
+		type(name) == "string",
+		("Bad argument #2 to `Register' (expected string, got %q).")
+			.format(type(name)));
+	assert(
+		type(InitFunction) == "function" or InitFunction == nil,
+		("Bad argument #3 to `Register' (expected function or nil, got %q).")
+			.format(type(InitFunction)));
+
     self.registered[name] = InitFunction or function() end;
 end
 
 function Loader:Unregister(name)
+	assert(
+		type(name) == "string",
+		("Bad argument #2 to `Unregister' (expected string, got %q)")
+			.format(type(name)));
+	assert(
+		self.registered[name] ~= nil,
+		("Attempting to unregister unknown addon `%s'.")
+			.format(name));
+
     self.registered[name] = nil;
 end
 
