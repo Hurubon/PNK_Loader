@@ -1,4 +1,4 @@
-local Loader = PNK_LibStub:NewLibrary("PNK_Loader", 2);
+local Loader = PNK_LibStub:NewLibrary("PNK_Loader", 4);
 
 if Loader == nil then
     return;
